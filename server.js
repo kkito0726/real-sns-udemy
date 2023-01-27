@@ -3,10 +3,10 @@ const app = express();
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/posts");
-const PORT = 3000;
+const PORT = 5050;
 const mongoose = require("mongoose");
 require("dotenv").config();
-
+mongoose.set("strictQuery", false);
 // データベース接続
 mongoose
   .connect(process.env.MONGOURL)
